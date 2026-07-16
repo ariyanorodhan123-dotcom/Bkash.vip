@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("https://i.pinimg.com/474x/50/b8/fd/50b8fd3bb87eed2b865ea7a189cae40c.jpg") no-repeat center center fixed;
+    background-size: cover;
+    padding: 20px;
+}
+
+.container { width: 100%; max-width: 420px; }
+
+.login-box {
+    background: rgba(230, 223, 223, 0.75);
+    border: 1px solid rgba(251, 255, 255, 0.979);
+    border-radius: 24px;
+    padding: 40px 35px;
+    backdrop-filter: blur(16px);
+    box-shadow: 0 20px 50px rgba(236, 222, 227, 0.6);
+}
+
+.logo { text-align: center; margin-bottom: 35px; }
+.logo img { width: 260px; margin-bottom: 10px; }
+.logo h2 {
+    color: #e61f61;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.input-box {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-box input {
+    width: 100%;
+    height: 58px;
+    border: none;
+    outline: none;
+    border-radius: 12px;
+    background: #000000;
+    padding-left: 55px;
+    padding-right: 20px;
+    font-size: 16px;
+    color: #ff2492;
+}
+
+.input-box i {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #e426b4;
+    font-size: 19px;
+}
+
+.eye {
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #000000;
+}
+
+.login-btn {
+    width: 100%;
+    height: 58px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(90deg,#df08b0,#cf06a4);
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.login-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgb(218, 218, 218);
+}
+
+.divider {
+    margin: 30px 0;
+    text-align: center;
+    color: #aaa;
+    position: relative;
+    font-size: 15px;
+}
+
+.divider::before, .divider::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 38%;
+    height: 1px;
+    background: rgba(255,255,255,0.15);
+}
+.divider::before { left: 0; }
+.divider::after { right: 0; }
+
+.register {
+    margin-top: 28px;
+    text-align: center;
+    color: #000000;
+}
+.register a {
+    color: #ee1aae;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+@media(max-width: 480px) {
+    .login-box { padding: 30px 25px; }
+    .logo img { width: 200px; }
+}
