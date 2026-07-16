@@ -51,12 +51,19 @@
 
             <!-- Password -->
             <div class="input-box">
-                <i class="fa-solid fa-lock"></i>
-                <input type="password" name="password" placeholder="Withdraw Password" required>
-                <span class="eye">
-                    <i class="fa-solid fa-eye"></i>
-                </span>
-            </div>
+                 <i class="fa-solid fa-lock"></i>
+
+                <input
+                 type="password"
+                 id="password"
+                 name="password"
+                 placeholder="Withdraw Password"
+                 required>
+
+    <span class="eye" id="togglePassword">
+        <i class="fa-solid fa-eye"></i>
+    </span>
+</div>
 
             <button type="submit" class="login-btn">SUBMIT</button>
 
@@ -71,6 +78,19 @@
 </div>
 
 <script>
+    // Password Show / Hide
+const password = document.getElementById("password");
+const togglePassword = document.getElementById("togglePassword");
+
+togglePassword.addEventListener("click", function () {
+    if (password.type === "password") {
+        password.type = "text";
+        this.querySelector("i").className = "fa-solid fa-eye-slash";
+    } else {
+        password.type = "password";
+        this.querySelector("i").className = "fa-solid fa-eye";
+    }
+});
 // Amount Validation
 const amount = document.getElementById("amount");
 const amountError = document.getElementById("amountError");
